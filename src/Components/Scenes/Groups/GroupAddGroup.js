@@ -93,24 +93,8 @@ function GroupAddGroup() {
             </Form.Group>
             {/* Btn submit add group */}
             <Button 
-                type='submit'
                 primary
-                // onClick={(event) => {
-                //     let newValuePost = new Group(name.nameGroup,avatar,playerCheck);
-                //     if ( !!name.nameGroup === false ) {
-                //         setName({ nameGroup : '', validNameGroup : true });
-                //     } else {
-                //         postNewAPIType('groups',newValuePost)
-                //         .then(value => {
-                //             groups.push(value.data);
-                //             setAvatar('Zeus');
-                //             setPlayerCheck([]);
-                //             setName({ nameGroup : '', validNameGroup : false });
-                //             setError(false);
-                //         })
-                //         .catch(err => setError(true) );
-                //     }
-                // }}
+                type='submit'
                 onClick={() => addGroup(name,background,arrPlayers) }
                 
             > <Icon name='check' /> Submit</Button>

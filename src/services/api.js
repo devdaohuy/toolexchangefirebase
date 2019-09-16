@@ -1,5 +1,4 @@
 import firebase from './firebase';
-import { async } from 'q';
 
 var db = firebase.firestore();
 
