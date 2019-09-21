@@ -13,6 +13,12 @@ const sideBarValue = [
 function SideBar(props) {
     const [activeItem,setActiveItem] = useState('Home');
     const {history} = props;
+
+    const handleItemClick = (sideBar, setState, history) => {
+        setState(sideBar.name);
+        history.push(sideBar.link);
+    };
+
     return (
         <Segment inverted >
             <Menu inverted secondary >
@@ -78,11 +84,6 @@ function SideBar(props) {
             </Menu>
         </Segment>    
     )
-};
-
-function handleItemClick(sideBar,setState,history) {
-    setState(sideBar.name);
-    history.push(sideBar.link);
 };
 
 export default withRouter(SideBar);

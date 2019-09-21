@@ -5,7 +5,6 @@ import {withRouter} from 'react-router';
 import {Link} from 'react-router-dom';
 
 function GameGroup(props) {
-    const {match} = props;
     const [groups,setGroups] = useState([]);
 
     useEffect(() => {

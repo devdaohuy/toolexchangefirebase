@@ -18,8 +18,7 @@ const routeGames = [
     }
 ];
 
-function GameCardRoute(props) {
-    const {history} = props;
+function GameCardRoute() {
     return (
         <Segment padded='very'>
             <Card.Group centered >

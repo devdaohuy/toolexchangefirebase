@@ -2,8 +2,9 @@ import React from 'react';
 import * as moment from 'moment';
 import { Table, Icon, Image, List } from 'semantic-ui-react';
 
-function ResultsGroupInfo(props) {
+function ResultsSumaryGroupInfo(props) {
     const {group} = props;
+    //debugger;
     if(!!Object.keys(group).length === false) {
         return null;
     } else {
@@ -12,7 +13,7 @@ function ResultsGroupInfo(props) {
                 <Table.Body>
                     <Table.Row>
                         <Table.Cell> <Icon name="address book" /> Name Group </Table.Cell>
-                        {/* <Table.Cell> <Image src={`${url.server}/image/${group.background}.jpg`} avatar /> {group.name} </Table.Cell> */}
+                        <Table.Cell> <Image src={`/images/${group.background}.jpg`} avatar /> {group.name} </Table.Cell>
                     </Table.Row>
                     <Table.Row>
                         <Table.Cell> <Icon name="address book outline" /> ID Group </Table.Cell>
@@ -23,7 +24,7 @@ function ResultsGroupInfo(props) {
                         <Table.Cell> {moment(group.createAt).format('MMMM Do YYYY, h:mm:ss a')} </Table.Cell>
                     </Table.Row>
                     <Table.Row>
-                        <Table.Cell> <Icon name="user outline " /> Players </Table.Cell>
+                        <Table.Cell> <Icon name="user outline" /> Players </Table.Cell>
                         <Table.Cell>
                             <List horizontal >
                             {
@@ -44,4 +45,4 @@ function ResultsGroupInfo(props) {
     }
 };
 
-export default ResultsGroupInfo;
+export default ResultsSumaryGroupInfo;

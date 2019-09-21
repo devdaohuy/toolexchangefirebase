@@ -9,17 +9,32 @@ function Group(name,background,arrPlayers) {
     this.background = background;
     this.createAt = Date.now();
     this.players = arrPlayers;
-    this.games = []
+    this.games = [] //
 };
 
 function GamePlay(game,group,stages,summary) {
     this.game = game; // what game play
-    this.group = {
-        idGroup : group.id,
-        name : group.name
-    }; // what group play total member play
+    this.playAt = Date.now();
     this.stages = stages; // total stage play vd : stage1 stage2 stage3
     this.summary = summary; // summary players game
 };
+// ===> Object game in Group
+function GameInGroup(game,gameID,playAt,summary,stages) {
+    this.game = game;
+    this.id = gameID;
+    this.playAt = playAt;
+    this.summary = summary;
+    this.stages = stages
+};
 
-export {Player,Group,GamePlay};
+// function GamePlay(game,group,stages,summary) {
+//     this.game = game; // what game play
+//     this.group = {
+//         idGroup : group.id,
+//         name : group.name
+//     }; // what group play total member play
+//     this.stages = stages; // total stage play vd : stage1 stage2 stage3
+//     this.summary = summary; // summary players game
+// };
+
+export {Player,Group,GameInGroup,GamePlay};

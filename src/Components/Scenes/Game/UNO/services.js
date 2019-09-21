@@ -11,7 +11,6 @@ function oneWin(arrayGames,winner,setState) {
     });
     setState(newArrayGame);
 };
-
 // ===> set Point every add game form
 function setPointPlayer(arrayGames,player,point,setState,event) {
     event.persist();
@@ -52,9 +51,9 @@ function gameplayInStage(arrayGames) {
             return acc + parseInt(cur.point);
         }
     },0);
-    
+
     // declare player point win and lose player point lose
-    return arrayGames.map(value => {
+    let gamePlay = arrayGames.map(value => {
         if (value.isWin === true) {
             value.point = pointWin; // point win = total point lose
             return value;
@@ -63,6 +62,7 @@ function gameplayInStage(arrayGames) {
             return value;
         }
     });
+    return gamePlay;
 };
 
 function summaryStages(stages, players) {
@@ -89,5 +89,6 @@ function summaryStages(stages, players) {
     });
     return newSummary;
 };
+
 
 export {oneWin, setPointPlayer, pointWinner, gameplayInStage, summaryStages};

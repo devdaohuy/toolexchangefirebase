@@ -1,20 +1,39 @@
 import React from 'react';
 import {GamePlay} from '../../../../services/initObject';
-import {setDocument} from '../../../../services/api';
-import {summaryStages} from './services';
-import {pointWinner} from './services';
-import {Modal,Button,Icon,Message,Header,Table} from 'semantic-ui-react';
+import {updateDocument} from '../../../../services/api';
+import {summaryStages,pointWinner} from './services';
+import {Modal,Button,Icon,Header,Table} from 'semantic-ui-react';
 import {withRouter} from 'react-router';
 
 function GameUNOPlayModal(props) {
-    const {group, stages, history} = props;
+    const {group, stages, history, match} = props;
     //debugger;
+    //console.log(match);
     const setDocumentGameplay = () => {
-        let newSummary = summaryStages(stages, group.players);
-        let newGameplay = new GamePlay('UNO',group,stages,newSummary);
-        setDocument('games', newGameplay)
-        .then(() => history.push('/game/finish') )
+        let newSummary = summaryStages(stages, group.players); // create total summary game is play
+        let newGameplay = new GamePlay('UNO',group,stages,newSummary); 
+
+        // setDocument('games', newGameplay)
+        // .then((value) => {
+        //     console.log('Set New GamePlay Success !!!');
+        //     //console.log(value)
+        //     let newGame = new GameInGroup('UNO', value.id, Date.now(), newSummary, stages);
+        //     updateDocument('groups',group.id , newGame)
+        //     .then(() => {
+        //         console.log('Update Success');
+        //         history.push('/game/finish');
+        //     })
+        //     .catch(err => console.error('Error Update : ' , err) );
+        // } ) // update game in DB Group
+        // .catch(err => console.log(err) );
+
+        updateDocument('groups', match.params.groupID , newGameplay )
+        .then(() => {
+            console.log('Update Group success');
+            history.push('/game/finish');
+        })
         .catch(err => console.log(err) );
+
     };
 
     if(!!Object.keys(group).length === false) {

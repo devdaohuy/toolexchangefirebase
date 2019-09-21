@@ -3,10 +3,10 @@ import GameUNOPlayModal from './GameUNOPlayModal';
 import GameUNOGroupInfo from './GameUNOGroupInfo';
 import GameUNOPlayStages from './GameUNOPlayStages';
 //import * as moment from 'moment';
-import {oneWin, setPointPlayer, pointWinner, gameplayInStage} from './services';
+import {oneWin, setPointPlayer, gameplayInStage} from './services';
 import {getOne} from '../../../../services/api';
 import {withRouter} from 'react-router'
-import { Loader, Container, Header, Button, Checkbox, Icon, Table, Input, Modal, Divider, Message, Responsive } from 'semantic-ui-react';
+import { Container, Header, Button, Checkbox, Icon, Table, Input, Divider } from 'semantic-ui-react';
 
 function GameUNOPlay(props) {
     const {match} = props;
@@ -56,7 +56,7 @@ function GameUNOPlay(props) {
             return newGame;
         });
     };
-
+ 
     useEffect(() => { fetchGroup(match.params.groupID) }, []);
 
     //debugger;

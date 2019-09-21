@@ -26,7 +26,7 @@ async function getOne(collection,document) {
             id : res.id,
             ...res.data()
         };
-        console.log(oneData)
+        //console.log(oneData)
         return oneData;
     } catch(err) {
         console.log(err);
@@ -42,5 +42,11 @@ function deleteDocument(collection,idDocument) {
     return db.collection(collection).doc(idDocument).delete();
 };
 
-export {getAll,getOne,setDocument,deleteDocument};
+function updateDocument(collection, idDocument, dataUpdate) {
+    return db.collection(collection).doc(idDocument).update({
+        games : firebase.firestore.FieldValue.arrayUnion({...dataUpdate})
+    });
+};
+
+export {getAll,getOne,setDocument,deleteDocument,updateDocument};
 
