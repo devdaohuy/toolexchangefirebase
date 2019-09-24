@@ -9,7 +9,6 @@ function GameUNOPlayStages(props) {
     } else {
         return(
             <Table>
-    
                 <Table.Header>
                 <Divider horizontal >
                     <Header as='h4'> <Icon name='coffee' /> Stages already play : </Header>

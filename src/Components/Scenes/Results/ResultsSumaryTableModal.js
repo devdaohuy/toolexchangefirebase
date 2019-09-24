@@ -11,7 +11,6 @@ function ResultsSumaryTableModal(props) {
     } else {
         return (
             <Table definition color={'black'} >
-                
                 <Table.Body>
                     {
                         games.map((game,index) => (

@@ -94,7 +94,8 @@ function ResultsGroupModal(props) {
         <Modal trigger={<Button> {moment(game.playAt).format('MMMM Do YYYY, h:mm:ss a')} </Button>} >
             <Modal.Content>
                 <Divider horizontal >
-                    <Header as='h3'> <Icon name='chess pawn' /> Point Match </Header>    
+                    <Header as='h3'> <Icon name='chess pawn' /> Point Match </Header>  
+                    <Header as='h4'> <Icon name='chess pawn' /> Game : {game.game} </Header>        
                 </Divider>
                 <ResponsiveStagesModalComputer
                     game={game}

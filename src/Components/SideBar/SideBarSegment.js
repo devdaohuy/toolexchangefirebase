@@ -20,10 +20,10 @@ function SideBar(props) {
     };
 
     return (
-        <Segment inverted >
-            <Menu inverted secondary >
+        <Segment inverted>
+            <Menu inverted secondary>
 
-                <Menu.Item header >
+                <Menu.Item header>
                     <Responsive
                     />
                     <Responsive
@@ -73,7 +73,7 @@ function SideBar(props) {
                                         key={index}
                                         onClick={() => handleItemClick(sideBar,setActiveItem, history) }
                                     > 
-                                        <Icon name={sideBar.sideIcon} />
+                                        <Icon name={sideBar.sideIcon}/>
                                         {sideBar.name} 
                                     </Dropdown.Item>
                                 ))

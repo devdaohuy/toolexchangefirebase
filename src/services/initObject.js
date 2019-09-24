@@ -8,6 +8,7 @@ function Group(name,background,arrPlayers) {
     this.name = name;
     this.background = background;
     this.createAt = Date.now();
+
     this.players = arrPlayers;
     this.games = [] //
 };
@@ -18,10 +19,10 @@ function GamePlay(game,group,stages,summary) {
     this.stages = stages; // total stage play vd : stage1 stage2 stage3
     this.summary = summary; // summary players game
 };
-// ===> Object game in Group
+
+// ===> Object game in Group ####
 function GameInGroup(game,gameID,playAt,summary,stages) {
     this.game = game;
-    this.id = gameID;
     this.playAt = playAt;
     this.summary = summary;
     this.stages = stages

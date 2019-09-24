@@ -2,7 +2,6 @@ import React,{useState, useEffect} from 'react';
 import GameUNOPlayModal from './GameUNOPlayModal';
 import GameUNOGroupInfo from './GameUNOGroupInfo';
 import GameUNOPlayStages from './GameUNOPlayStages';
-//import * as moment from 'moment';
 import {oneWin, setPointPlayer, gameplayInStage} from './services';
 import {getOne} from '../../../../services/api';
 import {withRouter} from 'react-router'

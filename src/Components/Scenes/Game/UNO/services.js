@@ -34,9 +34,6 @@ function pointWinner(stages,winner) {
             }
         })            
     });
-    // let pointWin = pointWinArray.reduce((acc,cur) => {
-    //     return acc + cur;
-    // }, 0);
     let pointWin = pointWinArray.reduce((acc,cur) => acc + cur, 0 ); // Total Number
     //console.log(pointWin);
     return pointWin;

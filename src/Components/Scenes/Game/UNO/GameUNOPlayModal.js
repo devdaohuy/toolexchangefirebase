@@ -13,20 +13,6 @@ function GameUNOPlayModal(props) {
         let newSummary = summaryStages(stages, group.players); // create total summary game is play
         let newGameplay = new GamePlay('UNO',group,stages,newSummary); 
 
-        // setDocument('games', newGameplay)
-        // .then((value) => {
-        //     console.log('Set New GamePlay Success !!!');
-        //     //console.log(value)
-        //     let newGame = new GameInGroup('UNO', value.id, Date.now(), newSummary, stages);
-        //     updateDocument('groups',group.id , newGame)
-        //     .then(() => {
-        //         console.log('Update Success');
-        //         history.push('/game/finish');
-        //     })
-        //     .catch(err => console.error('Error Update : ' , err) );
-        // } ) // update game in DB Group
-        // .catch(err => console.log(err) );
-
         updateDocument('groups', match.params.groupID , newGameplay )
         .then(() => {
             console.log('Update Group success');
