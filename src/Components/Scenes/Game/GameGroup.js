@@ -1,6 +1,6 @@
 import React,{useState,useEffect} from 'react';
 import {getAll} from '../../../services/api';
-import {Segment,Loader,Card,Image,Icon,List,Button} from 'semantic-ui-react';
+import {Segment,Loader,Card,Image,Icon,List,Button, Header} from 'semantic-ui-react';
 import {withRouter} from 'react-router';
 import {Link} from 'react-router-dom';
 
@@ -31,7 +31,11 @@ function GameGroup(props) {
                                 ui={false}
                             />
                             <Card.Content>
-                                <Card.Header> <Icon name='group' circular /> {group.name} </Card.Header>
+                                <Card.Header textAlign='center'>
+                                     <Header as='h4' dividing>
+                                        <Icon name='group' /> {group.name}
+                                    </Header>
+                                </Card.Header>
                                 <Card.Description>
                                     <List ordered >
                                         {
@@ -40,7 +44,6 @@ function GameGroup(props) {
                                                     <Icon name='user' />
                                                     <List.Content>
                                                         <List.Header> {player.name} </List.Header>
-                                                     
                                                     </List.Content>
                                                 </List.Item>
                                             ))
@@ -48,8 +51,8 @@ function GameGroup(props) {
                                     </List>
                                 </Card.Description>
                             </Card.Content>
-                            <Card.Content extra >
-                                <Button color='orange' as={Link} to={`${props.match.url}/${group.id}`} > Go {group.name} Page </Button>
+                            <Card.Content extra textAlign='center' >
+                                <Button color='yellow' as={Link} to={`${props.match.url}/${group.id}`} > Go {group.name} Page </Button>
                             </Card.Content>
                         </Card>
                     ))

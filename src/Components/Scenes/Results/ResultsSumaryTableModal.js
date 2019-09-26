@@ -10,12 +10,13 @@ function ResultsSumaryTableModal(props) {
         return null;
     } else {
         return (
-            <Table definition color={'black'} >
+            <Table celled color={'black'} >
                 <Table.Body>
                     {
                         games.map((game,index) => (
                             <Table.Row key={index} >
                                 <Table.Cell> <Icon name='calendar' /> Date {index + 1 } </Table.Cell>
+                                <Table.Cell> <Icon name='chess board'/> {game.game} </Table.Cell>
                                 <Table.Cell>
                                     <ResultsGroupModal
                                         game={game}

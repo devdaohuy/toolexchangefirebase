@@ -21,7 +21,6 @@ function GroupIndex() {
                 raised
             >
                 <Grid columns={2} relaxed='very' >
-
                     {/* Component Create Player */}
                     <Grid.Column>
                         <Header as='h3' textAlign='center' > <Icon name='user plus' /> Create Group </Header>

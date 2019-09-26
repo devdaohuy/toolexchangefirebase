@@ -155,7 +155,11 @@ function GameUNOPlay(props) {
                     </Table.Row>
                 </Table.Footer>
             </Table>
-        
+
+            <Divider horizontal >
+                    <Header as='h4'> <Icon name='coffee' /> Stages Play  </Header>
+            </Divider>
+
             <GameUNOPlayStages
                 gameplay={gameplay}
                 stages={stages}

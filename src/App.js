@@ -1,5 +1,6 @@
 import React from 'react';
 import SideBarSegment from './Components/SideBar/SideBarSegment';
+import BreadcrumbGame from './Components/BreadcrumbGame';
 import HomeIndex from './Components/Scenes/Home/HomeIndex';
 import PlayerIndex from './Components/Scenes/Players/PlayerIndex';
 import GroupIndex from './Components/Scenes/Groups/GroupIndex';
@@ -17,7 +18,12 @@ function App() {
                 <SideBarSegment/>
             </Grid.Column>
           </Grid.Row>
-          
+          <Grid.Row>
+            <Grid.Column>
+                <BreadcrumbGame/>
+            </Grid.Column>
+          </Grid.Row>
+           
           <Grid.Row>
             {/* Route page */}
             <Grid.Column>

@@ -14,7 +14,7 @@ function SideBar(props) {
     const [activeItem,setActiveItem] = useState('Home');
     const {history} = props;
 
-    const handleItemClick = (sideBar, setState, history) => {
+    const handleItemClick = (sideBar, setState, history) => { 
         setState(sideBar.name);
         history.push(sideBar.link);
     };
@@ -22,22 +22,18 @@ function SideBar(props) {
     return (
         <Segment inverted>
             <Menu inverted secondary>
-
                 <Menu.Item header>
                     <Responsive
-                    />
-                    <Responsive
                         {...Responsive.onlyComputer}
-                        as={Menu.Header}
                     >
-                        <Icon name='chess king' size='big' /> Exchange Game
+                        <Menu.Header> <Icon name='chess king' size='big' /> Exchange Game </Menu.Header>
                     </Responsive>
+                    
                     <Responsive
                         {...Responsive.onlyMobile}
-                        as={Icon}
-                        name='chess king'
-                        size='large'
-                    />
+                    >
+                        <Icon name='chess king' size='large'/>
+                    </Responsive>
                 </Menu.Item>
                 
                 {/* only show Game Result in mobile */}

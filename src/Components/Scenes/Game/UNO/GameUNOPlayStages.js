@@ -1,5 +1,5 @@
 import React from 'react';
-import {Table, Divider,Header,Icon} from 'semantic-ui-react';
+import {Table,Icon} from 'semantic-ui-react';
 
 function GameUNOPlayStages(props) {
     const {gameplay, stages} = props;
@@ -10,9 +10,6 @@ function GameUNOPlayStages(props) {
         return(
             <Table>
                 <Table.Header>
-                <Divider horizontal >
-                    <Header as='h4'> <Icon name='coffee' /> Stages already play : </Header>
-                </Divider>
                     <Table.Row>
                         <Table.HeaderCell> <Icon name='user' circular /> Player </Table.HeaderCell>
                         {

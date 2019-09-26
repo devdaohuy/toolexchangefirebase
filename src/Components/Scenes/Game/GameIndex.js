@@ -10,7 +10,7 @@ import { Route, Switch } from 'react-router-dom';
 function GameIndex() {
     return (
         <Container>
-            <IconHeader icon='chess rock' header='Game' sub='Game Play UNO and ...' />
+            <IconHeader icon='chess rock' header='Game' sub='Game Play UNO and Tien Len' />
             <Divider/>
             {/* Single Page */}
             <Switch>
@@ -25,8 +25,3 @@ function GameIndex() {
 };
 
 export default GameIndex;
-
-// xem laij dieu huong 
-
-// choi game -> choose group -> choose game -> game play -> finish game
-//              localhost/game/:group/uno/finish

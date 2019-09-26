@@ -91,7 +91,7 @@ function ResultsGroupModal(props) {
     //debugger;
     //console.log(game);
     return (
-        <Modal trigger={<Button> {moment(game.playAt).format('MMMM Do YYYY, h:mm:ss a')} </Button>} >
+        <Modal trigger={<Button> {moment(game.playAt).locale('vi').format('MMMM Do YYYY, h:mm:ss a')} </Button>} >
             <Modal.Content>
                 <Divider horizontal >
                     <Header as='h3'> <Icon name='chess pawn' /> Point Match </Header>  
