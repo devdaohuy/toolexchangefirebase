@@ -43,6 +43,3 @@ function App() {
 }
 
 export default App;
-
-// App.js 1st pages load page first, route page
-// SideBar lam rieng khong lien quan
