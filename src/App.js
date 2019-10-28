@@ -6,6 +6,7 @@ import PlayerIndex from './Components/Scenes/Players/PlayerIndex';
 import GroupIndex from './Components/Scenes/Groups/GroupIndex';
 import GameIndex from './Components/Scenes/Game/GameIndex';
 import ResultsIndex from './Components/Scenes/Results/ResultsIndex';
+import DutyIndex from './Components/Scenes/Duty/DutyIndex';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Grid } from 'semantic-ui-react';
 
@@ -33,7 +34,7 @@ function App() {
                 <Route path='/groups' component={GroupIndex}/>
                 <Route path='/game' component={GameIndex} />
                 <Route path='/results' component={ResultsIndex} />
-          
+                <Route path='/duty' component={DutyIndex}/>
               </Switch>
             </Grid.Column>
           </Grid.Row>

@@ -4,6 +4,11 @@ function Player(name) {
     this.groups = []
 };
 
+function Person(name) {
+    this.name = name;
+    this.createAt = Date.now();
+};
+
 function Group(name,background,arrPlayers) {
     this.name = name;
     this.background = background;
@@ -38,4 +43,4 @@ function GameInGroup(game,gameID,playAt,summary,stages) {
 //     this.summary = summary; // summary players game
 // };
 
-export {Player,Group,GameInGroup,GamePlay};
+export {Player,Person,Group,GameInGroup,GamePlay};
