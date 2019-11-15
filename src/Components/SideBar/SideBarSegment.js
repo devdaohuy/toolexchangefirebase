@@ -8,7 +8,7 @@ const sideBarValue = [
     { name : 'Groups', sideIcon : 'group', link : '/groups' },
     { name : 'Game', sideIcon : 'chess rook', link : '/game' },
     { name : 'Results', sideIcon : 'balance', link : '/results' },
-    { name : 'Duty', sideIcon : 'balance', link : '/duty' }
+    { name : 'Duty', sideIcon : 'bity', link : '/duty' }
 ];
 
 function SideBar(props) {
